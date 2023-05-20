@@ -2,11 +2,12 @@
   font-family: Roboto;
 }
 
-p {
-  color: #3e3e3e;
+p, #columns-list, #insurance-company {
+  color: #252525;
   font-weight: 400;
   line-height: 1.5;
   margin-block: 0 0;
+  margin: 0.3em 0em;
 }
 
 body {
@@ -39,7 +40,6 @@ ul {
 
 .container--content {
   margin: 1em 4vw;
-  padding: 0 0;
 }
 
 .container--full-width {
@@ -52,10 +52,16 @@ ul {
 }
 
 .container--bcg {
-  background: url(images/white_texture.jpg) repeat center;
-  width: 100%;
+  background: url("images/white_texture.jpg") no-repeat 0 0;
   background-position: center center;
   background-size: cover;
+  padding: 1em 0;
+}
+
+.subheading {
+  margin: 0.5em 0;
+  position: relative;
+  z-index: 800;
 }
 
 .flex--top-bar {
@@ -107,9 +113,41 @@ ul {
   transform: scale(1);
 }
 
+.columns {
+  padding-left: 1em;
+  padding-top: 0.25em;
+  column-count: 3;
+}
+
+#columns-list {
+  list-style: square;
+}
+
+#insurance-company {
+  margin-left: 1em;
+  list-style: square;
+}
+
+.flex--doctors {
+  justify-content: center;
+}
+
+
+.flex--doctors > .flex__item {
+  margin: 0 1em;
+  padding: 1em;
+  border: #05619c solid 2px;
+  border-radius: 0.5em;
+  width: 40%;
+}
+
+.flex--doctors > .flex__item > h3 {
+  margin: 0 0;
+}
+
 @media (min-width: 1200px) {
   .container--content {
     max-width: 1100px;
-    margin: 1em auto;
+    margin: 0 auto;
   }
 }
