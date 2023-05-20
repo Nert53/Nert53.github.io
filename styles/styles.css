@@ -10,83 +10,106 @@ p {
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    color: #05619C;
-    font-weight: 800;
-    font-size: 3rem;
-    margin-bottom: 0.25em;
-    margin-top: 0em;
+  color: #05619c;
+  font-weight: 800;
+  font-size: 3rem;
+  margin-bottom: 0.25em;
+  margin-top: 0em;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .nav > li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .flex {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .container--content {
-    margin: 1em 4vw;
-    padding: 0 0;
+  margin: 1em 4vw;
+  padding: 0 0;
 }
 
 .container--full-width {
-    width: 100%;
+  width: 100%;
 }
 
 .container--blue {
-    background-color: #05619C;
-    color: #fff;
+  background-color: #05619c;
+  color: #fff;
 }
 
 .container--bcg {
-    background: url(images/white_texture.jpg) repeat center; 
-    width: 100%;
-    background-position: center center;
-    background-size: cover;
+  background: url(images/white_texture.jpg) repeat center;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
 }
 
 .flex--top-bar {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .nav {
-    height: 70px;
+  height: 70px;
 }
 
 .flex--nav {
-    justify-content: center;
+  justify-content: center;
 }
 
 .flex--nav__item {
-    margin: 0 1em;
+  margin: 0 1em;
 }
 
 .flex--nav__item > a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  display: block;
 }
 
-.flex--nav__item:hover {
-    border-bottom: #fff solid 2px;
+.flex--nav__item > a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 350ms, transform 350ms;
+}
+
+.flex--nav__item a::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.flex--nav__item a:hover::after {
+  transform: scale(1);
+}
+
+.flex--nav__item a:focus::after {
+  transform: scale(1);
 }
 
 @media (min-width: 1200px) {
-
-    .container--content {
-        max-width: 1100px;
-        margin: 1em auto;
-    }
+  .container--content {
+    max-width: 1100px;
+    margin: 1em auto;
+  }
 }
