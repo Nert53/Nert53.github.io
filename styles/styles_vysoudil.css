@@ -168,6 +168,16 @@ ul {
   width: 100%;
 }
 
+.opening-hours {
+  width: 50%;
+  margin: auto;
+}
+
+th {
+    width: 5em;
+    color: #05619c;
+}
+
 #map {
   height: 15em;
   width: 100%;
