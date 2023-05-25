@@ -143,8 +143,8 @@ ul {
 
 .flex--important {
   margin: 1em 0;
-  border: #C70039 solid 3px;
-  border-top: #C70039 solid 8px;
+  border: #c70039 solid 3px;
+  border-top: #c70039 solid 8px;
   border-radius: 0.5em;
   padding: 1em;
 }
@@ -176,23 +176,33 @@ ul {
   width: 100%;
 }
 
-.opening-hours {
-  width: 50%;
-  margin: auto;
-}
-
 /* ordinacni hodiny */
 
+.opening-hours {
+  width: 80%;
+  margin: 1em auto;
+  border-spacing: 0;
+  border: #05619c solid 2px;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
 th {
-    width: 5em;
-    color: #05619c;
+  width: 5em;
 }
 
 td {
-    text-align: center;
+  text-align: center;
 }
 
-th, td {height: 2em;}
+th,
+td {
+  height: 2em;
+}
+
+.table-line--bcg {
+  background-color: #deecfa;
+}
 
 #map {
   height: 15em;
@@ -211,7 +221,7 @@ th, td {height: 2em;}
   height: 60px;
 }
 
-.footer > p{
+.footer > p {
   color: #fff;
 }
 
