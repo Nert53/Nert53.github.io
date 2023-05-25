@@ -84,6 +84,7 @@ ul {
 
 .flex--nav {
   justify-content: center;
+  text-align: center;
 }
 
 .flex--nav__item {
@@ -176,7 +177,54 @@ ul {
   margin-top: 1em;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.footer > p{
+  color: #fff;
+}
+
 @media (max-width: 559px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex--top-bar {
+    align-items: start;
+  }
+
+  h1 {
+    margin-bottom: 0em;
+  }
+
+  .container--bcg {
+    background: #fff;
+  }
+
+  .flex--nav {
+    flex-direction: row;
+  }
+
+  .mobile-not {
+    display: none;
+  }
+
+  .columns {
+    column-count: 1;
+  }
+
+  .flex--doctors {
+    gap: 0.5em;
+    margin: 4vw;
+  }
+
+  .flex--doctors > .flex__item {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1200px) {
