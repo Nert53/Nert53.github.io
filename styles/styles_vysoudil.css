@@ -99,6 +99,7 @@ ul {
 
 .flex--nav {
   justify-content: center;
+  text-align: center;
 }
 
 .flex--nav__item {
