@@ -39,6 +39,8 @@ ul {
   list-style-type: none;
 }
 
+/* globalni */
+
 .flex {
   display: flex;
   flex-direction: row;
@@ -74,9 +76,22 @@ ul {
   padding: 0.5em 0 0 0;
 }
 
+.box-heading {
+  margin: 0 0;
+}
+
+/* top bar */
+
 .flex--top-bar {
   justify-content: space-between;
 }
+
+#top-bar-phone {
+  color: black;
+  font-size: 1.25em;
+}
+
+/* navigace */
 
 .nav {
   height: 60px;
@@ -123,9 +138,21 @@ ul {
   transform: scale(1);
 }
 
+/* dulezita oznameni */
+
+.flex--important {
+  margin: 1em 0;
+  border: #C70039 solid 3px;
+  border-top: #C70039 solid 8px;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+/* sloupce */
+
 .columns {
   padding-top: 0.25em;
-  column-count: 3;
+  column-count: 1;
 }
 
 #columns-list {
@@ -136,27 +163,7 @@ ul {
   list-style: inside;
 }
 
-.flex--doctors {
-  justify-content: center;
-  margin: 1em 0;
-}
-
-.flex--doctors > .flex__item {
-  margin: 0 1em;
-  padding: 1em;
-  border: #05619c solid 2px;
-  border-radius: 0.5em;
-  width: 40%;
-}
-
-.flex--doctors > .flex__item:hover {
-  transform: scale(1.03);
-  transition: transform 350ms;
-}
-
-.flex--doctors > .flex__item > h3 {
-  margin: 0 0;
-}
+/* kontakty */
 
 .flex--contact {
   justify-content: space-evenly;
@@ -173,10 +180,18 @@ ul {
   margin: auto;
 }
 
+/* ordinacni hodiny */
+
 th {
     width: 5em;
     color: #05619c;
 }
+
+td {
+    text-align: center;
+}
+
+th, td {height: 2em;}
 
 #map {
   height: 15em;
@@ -186,7 +201,51 @@ th {
   margin-top: 1em;
 }
 
+/* paticka */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.footer > p{
+  color: #fff;
+}
+
 @media (max-width: 559px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex--top-bar {
+    align-items: start;
+  }
+
+  h1 {
+    margin-bottom: 0em;
+  }
+
+  .container--bcg {
+    background: #fff;
+  }
+
+  .flex--nav {
+    flex-direction: row;
+  }
+
+  .mobile-not {
+    display: none;
+  }
+
+  .columns {
+    column-count: 1;
+  }
+
+  .opening-hours {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1200px) {

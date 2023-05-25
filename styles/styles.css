@@ -39,6 +39,8 @@ ul {
   list-style-type: none;
 }
 
+/* globalni */
+
 .flex {
   display: flex;
   flex-direction: row;
@@ -74,9 +76,17 @@ ul {
   padding: 0.5em 0 0 0;
 }
 
+.box-heading {
+  margin: 0 0;
+}
+
+/* top bar */
+
 .flex--top-bar {
   justify-content: space-between;
 }
+
+/* navigace */
 
 .nav {
   height: 60px;
@@ -124,6 +134,18 @@ ul {
   transform: scale(1);
 }
 
+/* dulezita oznameni */
+
+.flex--important {
+  margin: 1em 0;
+  border: #C70039 solid 3px;
+  border-top: #C70039 solid 8px;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+/* sloupce */
+
 .columns {
   padding-top: 0.25em;
   column-count: 3;
@@ -136,6 +158,8 @@ ul {
 #insurance-company {
   list-style: inside;
 }
+
+/* seznam ordinaci */
 
 .flex--doctors {
   justify-content: center;
@@ -155,9 +179,7 @@ ul {
   transition: transform 350ms;
 }
 
-.flex--doctors > .flex__item > h3 {
-  margin: 0 0;
-}
+/* kontakty */
 
 .flex--contact {
   justify-content: space-evenly;
@@ -172,10 +194,12 @@ ul {
 #map {
   height: 15em;
   width: 100%;
-  border: #05619c solid 1.5px;
+  border: #05619c solid 2px;
   border-radius: 0.5em;
   margin-top: 1em;
 }
+
+/* paticka */
 
 .footer {
   display: flex;
