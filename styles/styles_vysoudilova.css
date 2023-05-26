@@ -201,10 +201,6 @@ ul {
   overflow: hidden;
 }
 
-th {
-  width: 5em;
-}
-
 td {
   text-align: center;
 }
@@ -216,6 +212,10 @@ td {
 
 .table-line--bcg {
   background-color: #deecfa;
+}
+
+.important--text {
+  color: #c70039;
 }
 
 #map {

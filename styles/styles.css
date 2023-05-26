@@ -198,6 +198,15 @@ ul {
   transition: transform 350ms;
 }
 
+.link {
+  color: #252525;
+  text-decoration: none;
+}
+
+.link:hover {
+  border-bottom: #919191 solid 2px;
+}
+
 /* kontakty */
 
 .flex--contact {
