@@ -153,6 +153,10 @@ ul {
   transform: scale(1);
 }
 
+.nav__item--active {
+  border-bottom: #ffffff solid 2px;
+}
+
 /* dulezita oznameni */
 
 .flex--important {

@@ -65,8 +65,8 @@ ul {
 }
 
 .container--blue {
-  background-color: #05619c;
-  color: #fff;
+  background-color: #00629f;
+  color: #001d34;
 }
 
 .container--bcg {
@@ -121,7 +121,7 @@ ul {
 }
 
 .flex--nav__item > a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   position: relative;
   display: block;
@@ -151,6 +151,10 @@ ul {
 
 .flex--nav__item a:focus::after {
   transform: scale(1);
+}
+
+.nav__item--active {
+  border-bottom: #ffffff solid 2px;
 }
 
 /* dulezita oznameni */
