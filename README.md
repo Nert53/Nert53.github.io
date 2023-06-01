@@ -10,3 +10,4 @@ The design (mainly colors) also comes from original old website (screenshots icn
 - [ ] Contact section
 - [x] Mobile version
 - [x] Site for individual offices
+- [ ] Add price list

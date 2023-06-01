@@ -80,13 +80,31 @@ ul {
   color: #777777;
 }
 
+.text--important {
+  font-weight: 700;
+}
+
 .subheading {
   font-size: 2rem;
   padding: 0.5em 0 0 0;
 }
 
+.subheading--field {
+  margin-bottom: 0em;
+}
+
 .box-heading {
   margin: 0 0;
+}
+
+.link--inside {
+  color: #252525;
+  text-decoration: underline gray; 
+}
+
+.link--inside:hover {
+  color: #05619c;
+  text-decoration: underline;
 }
 
 /* top bar */
@@ -95,8 +113,22 @@ ul {
   justify-content: space-between;
 }
 
+#top-bar-phone, #top-bar-email {
+  padding: 0;
+}
+
 #top-bar-phone::before {
   content: url(images/call_icon.svg);
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  margin-right: 0.25em;
+  position: relative;
+  top: 5px;
+}
+
+#top-bar-email::before {
+  content: url(images/mail_icon.svg);
   display: inline-block;
   height: 24px;
   width: 24px;
@@ -137,6 +169,7 @@ ul {
   background-color: white;
   opacity: 0;
   transition: opacity 350ms, transform 350ms;
+  border-radius: 0.5em;
 }
 
 .flex--nav__item a::after {
@@ -153,8 +186,15 @@ ul {
   transform: scale(1);
 }
 
-.nav__item--active {
-  border-bottom: #ffffff solid 2px;
+.nav__item--active::before {
+  content: "";
+  background-color: #ffffff;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  display: block;
+  bottom: -2px;
+  border-radius: 0.5em;
 }
 
 /* dulezita oznameni */
@@ -205,8 +245,8 @@ ul {
   overflow: hidden;
 }
 
-th {
-  width: 5em;
+th, td {
+  width: 4em;
 }
 
 td {
@@ -222,8 +262,17 @@ td {
   background-color: #deecfa;
 }
 
+.link--contact {
+  color: #05619c;
+  text-decoration: none;
+}
+
+.link--contact:hover {
+  text-decoration: underline;
+}
+
 #map {
-  height: 15em;
+  height: 13em;
   width: 100%;
   border: #05619c solid 2px;
   border-radius: 0.5em;
@@ -242,6 +291,8 @@ td {
 .footer > p {
   color: #fff;
 }
+
+/* mobil */
 
 @media (max-width: 559px) {
   .flex {
@@ -264,6 +315,10 @@ td {
     flex-direction: row;
   }
 
+  .nav__item--active::before {
+    display: none;
+  }
+
   .mobile-not {
     display: none;
   }
@@ -276,6 +331,42 @@ td {
     width: 100%;
   }
 }
+
+/* tablety */
+
+@media (min-width: 560px) and (max-width: 699px) {
+  .mobile-not {
+    display: none;
+  }
+
+  .flex--top-bar > .flex__item:last-of-type {
+    min-width: 200px;
+  }
+
+  .opening-hours {
+    width: 100%;
+  }
+
+  .flex--contact {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 959px) {
+  .flex--top-bar > .flex__item:last-of-type {
+    min-width: 200px;
+  }
+
+  .opening-hours {
+    width: 100%;
+  }
+
+  .flex--contact {
+    flex-direction: column;
+  }
+}
+
+/* velke monitory */
 
 @media (min-width: 1200px) {
   .container--content {
