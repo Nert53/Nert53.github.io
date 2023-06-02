@@ -1,5 +1,5 @@
 * {
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
 }
 
 p,
@@ -33,6 +33,10 @@ h2 {
 ul {
   margin: 0;
   padding: 0;
+}
+
+address {
+  font-style: normal;
 }
 
 /* odrazky seznamu */
@@ -107,6 +111,15 @@ ul {
   text-decoration: underline;
 }
 
+.link {
+  color: #252525;
+  text-decoration: none;
+}
+
+.link:hover {
+  border-bottom: #919191 solid 2px;
+}
+
 /* top bar */
 
 .flex--top-bar {
@@ -159,31 +172,37 @@ ul {
   display: block;
 }
 
-.flex--nav__item > a::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: white;
-  opacity: 0;
-  transition: opacity 350ms, transform 350ms;
-  border-radius: 0.5em;
-}
-
-.flex--nav__item a::after {
-  opacity: 1;
-  transform: scale(0);
-  transform-origin: center;
-}
-
-.flex--nav__item a:hover::after {
-  transform: scale(1);
-}
-
-.flex--nav__item a:focus::after {
-  transform: scale(1);
+/* 
+  - animace v navigaci se zobrazuje pouze u nedotykovych zarizeni
+  - takze alespon notebook
+*/
+@media (min-width: 960px) {
+  .flex--nav__item > a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 350ms, transform 350ms;
+    border-radius: 0.5em;
+  }
+  
+  .flex--nav__item a::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+  }
+  
+  .flex--nav__item a:hover::after {
+    transform: scale(1);
+  }
+  
+  .flex--nav__item a:focus::after {
+    transform: scale(1);
+  }
 }
 
 .nav__item--active::before {
@@ -222,18 +241,6 @@ ul {
   list-style: inside;
 }
 
-/* kontakty */
-
-.flex--contact {
-  justify-content: space-evenly;
-  margin: 1em 0;
-  align-items: start;
-}
-
-.flex--contact > .flex__item {
-  width: 100%;
-}
-
 /* ordinacni hodiny */
 
 .opening-hours {
@@ -258,6 +265,20 @@ td {
   height: 2em;
 }
 
+
+/* kontakty */
+
+.flex--contact {
+  justify-content: space-evenly;
+  margin: 1em 0;
+  align-items: start;
+}
+
+.flex--contact > .flex__item {
+  width: 100%;
+  flex: 1 1 0;
+}
+
 .table-line--bcg {
   background-color: #deecfa;
 }
@@ -269,6 +290,11 @@ td {
 
 .link--contact:hover {
   text-decoration: underline;
+}
+
+
+#flex__item--map {
+  flex: 2 1 0;
 }
 
 #map {
@@ -290,6 +316,11 @@ td {
 
 .footer > p {
   color: #fff;
+}
+
+.link--footer {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* mobil */
@@ -370,7 +401,7 @@ td {
 
 @media (min-width: 1220px) {
   .container--content {
-    max-width: 1200px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
   }
