@@ -6,8 +6,8 @@ The design (mainly colors) also comes from original old website (screenshots icn
 
 ## To do
 - [ ] Add dark mode
-- [ ] Tablet version
-- [ ] Contact section
+- [X] Tablet version
+- [X] Contact section
 - [x] Mobile version
 - [x] Site for individual offices
 - [ ] Add price list
